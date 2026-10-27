@@ -5,7 +5,11 @@ try:
         sessions=json.load(file)
 except FileNotFoundError:
     sessions = []
-    
+
+def save_sessions(sessions):
+    with open("sessions.json","w") as file:
+        json.dump(sessions,file,indent=4)
+
 while True:
     print("=======================")
     print("Study Sprint Tracker")
@@ -76,5 +80,3 @@ while True:
     else:
         print("Invalid Choice, Try again.\n")
 
-with open("sessions.json","w") as file:
-    json.dump(sessions,file,indent=4)
