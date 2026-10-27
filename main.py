@@ -46,6 +46,32 @@ def add_session(sessions):
     return sessions
 
 def view_sessions(sessions):
+    print("====== Study Sessions ======")
+    if not sessions:
+        print("No study sessions recorded yet.")
+    for i in range(len(sessions)):
+        print(f"{i+1}. Topic: {sessions[i]['topic']} | Duration: {sessions[i]['minutes']} minutes")
+
+def show_summary(sessions):
+    print("====== Learning Summary ======")
+    if len(sessions)==0:
+        print("No study sessions recorded yet.\n")
+    else:
+                total_min=0
+                topic_total={}
+                for session in sessions:
+                    topic = session["topic"]
+                    minutes = session["minutes"]
+                    total_min+=minutes
+                    if topic in topic_total:
+                        topic_total[topic]+=minutes
+                    else:
+                        topic_total[topic]=minutes
+                print(f"Total study time : {total_min} minutes")
+                print("\nTime by topic :\n")
+                for topic, minutes in topic_total.items():
+                    print(f"\t{topic} : {minutes} minutes")
+                print("\n")
 
 while True:
     print("=======================")
@@ -65,11 +91,7 @@ while True:
     if x==1:
         sessions=add_session(sessions)
     elif x==2:
-        print("====== Study Sessions ======")
-        if not sessions:
-            print("No study sessions recorded yet.")
-        for i in range(len(sessions)):
-            print(f"{i+1}. Topic: {sessions[i]['topic']} | Duration: {sessions[i]['minutes']} minutes")
+        view_sessions(sessions)
     elif x==3:
         print("====== Learning Summary ======")
 
