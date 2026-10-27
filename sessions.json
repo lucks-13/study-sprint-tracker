@@ -6,5 +6,9 @@
     {
         "topic": "dsa",
         "minutes": 30
+    },
+    {
+        "topic": "Python",
+        "minutes": 60
     }
 ]
