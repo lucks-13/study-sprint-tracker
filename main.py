@@ -13,10 +13,20 @@ while True:
         x = int(input("Choose an option: "))
         print("\n")
     except ValueError:
+        print("Invalid Choice, Try again.\n")
         continue
     if x==1:
         study_topic = input("Enter Study topic (eg: Python, DSA, JavaScript) :")
-        duration = int(input("Enter duration in minutes (eg: 45) :"))
+        while True:
+            try:
+                duration = int(input("Enter duration in minutes (eg: 45) :"))
+                if duration<=0:
+                    print()
+                else:
+                    break
+            except ValueError:
+                print("Invalid Duration, Try again.\n")
+                continue
         new_session = {
             "topic":study_topic,
             "minutes":duration
