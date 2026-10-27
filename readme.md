@@ -19,7 +19,9 @@ this project help me to learn fundamentals of python, introduction cli and a sma
 ```
 git clone https://github.com/lucks-13/study-sprint-tracker.git
 ```
-
+```
+python main.py
+```
 ## How i made this project.
 
 this is a simple starting project, i got inspiration from chatgpt it told like it will be the best starting point.
