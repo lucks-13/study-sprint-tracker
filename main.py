@@ -14,8 +14,6 @@ def load_sessions():
         raise SystemExit(1)
     return sessions
 
-sessions = load_sessions()
-
 def save_sessions(sessions):
     with open("sessions.json","w") as file:
         json.dump(sessions,file,indent=4)
@@ -56,66 +54,26 @@ def show_summary(sessions):
     print("====== Learning Summary ======")
     if len(sessions)==0:
         print("No study sessions recorded yet.\n")
+        return
     else:
-                total_min=0
-                topic_total={}
-                for session in sessions:
-                    topic = session["topic"]
-                    minutes = session["minutes"]
-                    total_min+=minutes
-                    if topic in topic_total:
-                        topic_total[topic]+=minutes
-                    else:
-                        topic_total[topic]=minutes
-                print(f"Total study time : {total_min} minutes")
-                print("\nTime by topic :\n")
-                for topic, minutes in topic_total.items():
-                    print(f"\t{topic} : {minutes} minutes")
-                print("\n")
-
-while True:
-    print("=======================")
-    print("Study Sprint Tracker")
-    print("=======================")
-    print("1. Add study session")
-    print("2. View study sessions")
-    print("3. Show learning summary")
-    print("4. Exit\n")
-
-    try:
-        x = int(input("Choose an option: "))
+        total_min=0
+        topic_total={}
+        for session in sessions:
+            topic = session["topic"]
+            minutes = session["minutes"]
+            total_min+=minutes
+            if topic in topic_total:
+                topic_total[topic]+=minutes
+            else:
+                topic_total[topic]=minutes
+        print(f"Total study time : {total_min} minutes")
+        print("\nTime by topic :\n")
+        for topic, minutes in topic_total.items():
+            print(f"\t{topic} : {minutes} minutes")
         print("\n")
-    except ValueError:
-        print("Invalid Choice, Try again.\n")
-        continue
-    if x==1:
-        sessions=add_session(sessions)
-    elif x==2:
-        view_sessions(sessions)
-    elif x==3:
-        print("====== Learning Summary ======")
 
-        if len(sessions)==0:
-            print("No study sessions recorded yet.\n")
-        else:
-            total_min=0
-            topic_total={}
-            for session in sessions:
-                topic = session["topic"]
-                minutes = session["minutes"]
-                total_min+=minutes
-                if topic in topic_total:
-                    topic_total[topic]+=minutes
-                else:
-                    topic_total[topic]=minutes
-            print(f"Total study time : {total_min} minutes")
-            print("\nTime by topic :\n")
-            for topic, minutes in topic_total.items():
-                print(f"\t{topic} : {minutes} minutes")
-            print("\n")
-    elif x==4:
-        print("Good Bye\n")
-        break
-    else:
-        print("Invalid Choice, Try again.\n")
+def main():
+    sessions = load_sessions()
 
+if __name__ == "__main__":
+    main()
