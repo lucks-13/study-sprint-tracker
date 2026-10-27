@@ -4,6 +4,3 @@
 /.auto_git_push_config.json
 /.auto_git_push.log
 /setup-auto-git-push.ps1
-/setup-auto-git-push-fixed.ps1
-/setup-auto-git-push-v2.ps1
-/setup-auto-git-push-final.ps1
