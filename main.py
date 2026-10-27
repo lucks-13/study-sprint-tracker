@@ -28,7 +28,9 @@ while True:
         for i in range(len(sessions)):
             print(f"{i+1}. Topic: {sessions[i]['topic']} | Duration: {sessions[i]['minutes']}")
     elif x==3:
-        print("Showing learning summary.\n")
+        print("====== Learning Summary ======")
+        print(f"Total study time : {} minutes")
+        
     elif x==4:
         print("Good Bye\n")
         break
