@@ -12,7 +12,13 @@ while True:
 
     if x==1:
         session = []
-        study_topic = input("Study topic (eg: Python, DSA, JavaScript) :")
+        study_topic = input("Enter Study topic (eg: Python, DSA, JavaScript) :")
+        duration = int(input("Enter duration in minutes (eg: 45)"))
+        dict = {
+            "topic":study_topic,
+            "minutes":duration
+        }
+        session.append(dict)
         print("Adding a study session.\n")
     elif x==2:
         print("Viewing study session.\n")
