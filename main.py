@@ -44,12 +44,10 @@ while True:
                 topic_total[topic]+=minutes
             else:
                 topic_total[topic]=minutes
-
-
-
-        print(f"Total study time : {sum(session['minutes'] for session in sessions)} minutes")
-        for i in range(len(sessions)):
-            print(f"{sessions[i]['topic']} : {sessions[i]['minutes']} minutes")
+        print(f"Total study time : {total_min} minutes")
+        print("\nTime by topic :")
+        for topic, minutes in topic_total.items():
+            print(f"{topic} : {minutes} minutes")
     elif x==4:
         print("Good Bye\n")
         break
