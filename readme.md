@@ -41,8 +41,11 @@ and my response.
 ![alt text](asset/image-2.png)
 
 # What i have learned.
-* Introduction to command line interface
+* python programing and command line interface
 * Introduction to File I/O and persistent data
+* Intro to Json and difference between dictionaries and Json
+* debugging, testing, input validation and error handling
+* packaging Python applications using PyInstaller
 
 # Ai Disclosure
 i used ai to guide me on building this project and explicitly told to help me only when i got stuck.
