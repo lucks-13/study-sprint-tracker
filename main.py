@@ -9,9 +9,11 @@ while True:
     print("3. Show learning summary")
     print("4. Exit\n")
 
-    x = int(input("Choose an option: "))
-    print("\n")
-
+    try:
+        x = int(input("Choose an option: "))
+        print("\n")
+    except ValueError:
+        continue
     if x==1:
         study_topic = input("Enter Study topic (eg: Python, DSA, JavaScript) :")
         duration = int(input("Enter duration in minutes (eg: 45) :"))
@@ -48,6 +50,7 @@ while True:
             print("\nTime by topic :\n")
             for topic, minutes in topic_total.items():
                 print(f"\t{topic} : {minutes} minutes")
+            print("\n")
     elif x==4:
         print("Good Bye\n")
         break
