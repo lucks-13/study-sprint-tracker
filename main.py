@@ -18,7 +18,7 @@ while True:
     if x==1:
         while True:
             study_topic = input("Enter Study topic (eg: Python, DSA, JavaScript) :")
-            if not topic.strip:
+            if not study_topic.strip():
                 print("Topic name should not be empty.")
                 continue
             try:
@@ -37,10 +37,9 @@ while True:
         }
         sessions.append(new_session)
         print("Adding a study session.\n")
-        print(sessions)
     elif x==2:
         print("====== Study Sessions ======")
-        if len(sessions)==0:
+        if not sessions:
             print("No study sessions recorded yet.")
         for i in range(len(sessions)):
             print(f"{i+1}. Topic: {sessions[i]['topic']} | Duration: {sessions[i]['minutes']} minutes")
