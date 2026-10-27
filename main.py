@@ -8,9 +8,15 @@ print("4. Exit\n")
 
 while (True):
     x=int(input("Choose an option:"))
-    print("\n")
     if x<=4 and x>=1:
         break
+    print("Invalid Choice, Try again.")
 
 if x==1:
-    print("Adding a study session")
+    print("Adding a study session.")
+elif x==2:
+    print("Viewing study session.")
+elif x==3:
+    print("Showing learning summary.")
+elif x==4:
+    print("Good Bye")
