@@ -11,6 +11,7 @@ def load_sessions():
         raise SystemExit(1)
     if not isinstance(sessions,list):
         print("sessions.json must contain a json list.")
+        raise SystemExit(1)
     return sessions
 
 sessions = load_sessions()
@@ -22,7 +23,7 @@ def save_sessions(sessions):
 def add_session(sessions):
     while True:
         study_topic = input("Enter Study topic (eg: Python, DSA, JavaScript) :").strip()
-        if not study_topic.strip():
+        if not study_topic:
             print("Topic name should not be empty.")
             continue
         try:
@@ -43,6 +44,8 @@ def add_session(sessions):
     save_sessions(sessions)
     print("Adding a study session.\n")
     return sessions
+
+def view_sessions(sessions):
 
 while True:
     print("=======================")
