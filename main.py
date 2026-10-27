@@ -34,7 +34,19 @@ while True:
         if len(sessions)==0:
             print("No study sessions recorded yet.")
         else:
-            total
+            total_min=0
+            topic_total={}
+        for session in sessions:
+            topic = session["topic"]
+            minutes = session["minutes"]
+            total_min+=minutes
+            if topic in topic_total:
+                topic_total[topic]+=minutes
+            else:
+                topic_total[topic]=minutes
+
+
+
         print(f"Total study time : {sum(session['minutes'] for session in sessions)} minutes")
         for i in range(len(sessions)):
             print(f"{sessions[i]['topic']} : {sessions[i]['minutes']} minutes")
