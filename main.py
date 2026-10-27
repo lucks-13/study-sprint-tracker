@@ -1,3 +1,5 @@
+import json
+
 sessions = []
 
 while True:
@@ -70,3 +72,4 @@ while True:
     else:
         print("Invalid Choice, Try again.\n")
 
+with open(sessions.)

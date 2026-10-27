@@ -8,3 +8,8 @@ sessions = [
 
 with open("sessions.json","w") as file:
     json.dump(sessions, file, indent=4)
+
+with open("sessions.json","r") as file:
+    loaded_sessions = json.load(file)
+
+print(loaded_sessions[0]["topic"])
