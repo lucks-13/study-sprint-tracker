@@ -24,7 +24,7 @@ while True:
     elif x==2:
         print("====== Study Sessions ======")
         if len(sessions)==0:
-            print("No ")
+            print("No study sessions recorded yet.")
         for i in range(len(sessions)):
             print(f"{i+1}. Topic: {sessions[i]['topic']} | Duration: {sessions[i]['minutes']}")
     elif x==3:
