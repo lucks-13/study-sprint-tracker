@@ -4,4 +4,4 @@ Hello everyone this is my first project in phantom, almost after 1 year of break
 
 I'm starting this journey where i planned not to use ai in this entire event and planned to code all by myself
 
-in this event 
+in this event today [27 October 2026] i started my goal is to lockin 6hours per day and learn to become a full-stack developer where chatgpt is going to be my mentor to help me to learn the topics and will act as my code reviewer.
