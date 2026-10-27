@@ -3,7 +3,7 @@ import json
 try:
     with open("sessions.json","r") as file:
         sessions=json.load(file)
-except FileNotFoundError:
+except FileNotFoundError or :
     sessions = []
 
 def save_sessions(sessions):
@@ -27,7 +27,7 @@ while True:
         continue
     if x==1:
         while True:
-            study_topic = input("Enter Study topic (eg: Python, DSA, JavaScript) :")
+            study_topic = input("Enter Study topic (eg: Python, DSA, JavaScript) :").strip()
             if not study_topic.strip():
                 print("Topic name should not be empty.")
                 continue
@@ -46,6 +46,7 @@ while True:
             "minutes":duration
         }
         sessions.append(new_session)
+        save_sessions(sessions)
         print("Adding a study session.\n")
     elif x==2:
         print("====== Study Sessions ======")
