@@ -1,0 +1,14 @@
+[
+    {
+        "topic": "Python",
+        "miniutes": 60
+    },
+    {
+        "topic": "Django",
+        "minutes": 45
+    },
+    {
+        "topic": "DSA",
+        "minutes": 30
+    }
+]

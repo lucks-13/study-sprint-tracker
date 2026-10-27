@@ -1,8 +1,9 @@
 import json
 
 sessions = [
-    {"topic":"python","miniutes":45},
-    {"topic":"dsa","minutes":30}
+    {"topic":"Python","miniutes":60},
+    {"topic":"Django","minutes":45},
+    {"topic":"DSA","minutes":30}
 ]
 
 with open("sessions.json","w") as file:
