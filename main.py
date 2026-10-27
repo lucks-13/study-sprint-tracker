@@ -16,12 +16,16 @@ while True:
         print("Invalid Choice, Try again.\n")
         continue
     if x==1:
-        study_topic = input("Enter Study topic (eg: Python, DSA, JavaScript) :")
         while True:
+            study_topic = input("Enter Study topic (eg: Python, DSA, JavaScript) :")
+            if not topic.strip:
+                print("Topic name should not be empty.")
+                continue
             try:
                 duration = int(input("Enter duration in minutes (eg: 45) :"))
                 if duration<=0:
-                    print()
+                    print("Duration should not be negative or zero")
+                    continue
                 else:
                     break
             except ValueError:
