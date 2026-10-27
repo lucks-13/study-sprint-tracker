@@ -1,7 +1,11 @@
 import json
 
-sessions = []
-
+try:
+    with open("sessions.json","r") as file:
+        sessions=json.load(file)
+except FileNotFoundError:
+    sessions = []
+    
 while True:
     print("=======================")
     print("Study Sprint Tracker")
@@ -72,4 +76,5 @@ while True:
     else:
         print("Invalid Choice, Try again.\n")
 
-with open(sessions.)
+with open("sessions.json","w") as file:
+    json.dump(sessions,file,indent=4)
