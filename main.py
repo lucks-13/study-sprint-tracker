@@ -19,6 +19,30 @@ def save_sessions(sessions):
     with open("sessions.json","w") as file:
         json.dump(sessions,file,indent=4)
 
+def add_session(sessions):
+    while True:
+        study_topic = input("Enter Study topic (eg: Python, DSA, JavaScript) :").strip()
+        if not study_topic.strip():
+            print("Topic name should not be empty.")
+            continue
+        try:
+            duration = int(input("Enter duration in minutes (eg: 45) :"))
+            if duration<=0:
+                print("Duration should not be negative or zero")
+                continue
+            else:
+                break
+        except ValueError:
+            print("Invalid Duration, Try again.\n")
+            continue
+        new_session = {
+                "topic":study_topic,
+                "minutes":duration
+            }
+            sessions.append(new_session)
+            save_sessions(sessions)
+            print("Adding a study session.\n")
+
 while True:
     print("=======================")
     print("Study Sprint Tracker")
@@ -35,28 +59,7 @@ while True:
         print("Invalid Choice, Try again.\n")
         continue
     if x==1:
-        while True:
-            study_topic = input("Enter Study topic (eg: Python, DSA, JavaScript) :").strip()
-            if not study_topic.strip():
-                print("Topic name should not be empty.")
-                continue
-            try:
-                duration = int(input("Enter duration in minutes (eg: 45) :"))
-                if duration<=0:
-                    print("Duration should not be negative or zero")
-                    continue
-                else:
-                    break
-            except ValueError:
-                print("Invalid Duration, Try again.\n")
-                continue
-        new_session = {
-            "topic":study_topic,
-            "minutes":duration
-        }
-        sessions.append(new_session)
-        save_sessions(sessions)
-        print("Adding a study session.\n")
+        
     elif x==2:
         print("====== Study Sessions ======")
         if not sessions:
