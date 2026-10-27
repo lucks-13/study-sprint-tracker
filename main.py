@@ -1,13 +1,19 @@
 import json
 
-try:
-    with open("sessions.json","r") as file:
-        sessions=json.load(file)
-except FileNotFoundError:
-    sessions = []
-except json.JSONDecodeError:
-    print("session.json contains invalid Json, Please check the file before continuing")
-    raise SystemExit(1)
+def load_sessions():
+    if not isinstance(sessions,list):
+        print("sessions.json must contain a json list.")
+    try:
+        with open("sessions.json","r") as file:
+            sessions=json.load(file)
+    except FileNotFoundError:
+        sessions = []
+    except json.JSONDecodeError:
+        print("session.json contains invalid Json, Please check the file before continuing")
+        raise SystemExit(1)
+    return sessions
+
+sessions = load_sessions()
 
 def save_sessions(sessions):
     with open("sessions.json","w") as file:
