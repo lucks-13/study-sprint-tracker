@@ -10,8 +10,9 @@ def get_data_file():
     return os.path.join(data_dir,"sessions.json")
     
 def load_sessions():
+    data_file = get_data_file()
     try:
-        with open("sessions.json","r") as file:
+        with open(data_file,"r") as file:
             sessions=json.load(file)
     except FileNotFoundError:
         sessions = []
@@ -24,7 +25,8 @@ def load_sessions():
     return sessions
 
 def save_sessions(sessions):
-    with open("sessions.json","w") as file:
+    data_file = get_data_file()
+    with open(data_file,"w") as file:
         json.dump(sessions,file,indent=4)
 
 def add_session(sessions):
