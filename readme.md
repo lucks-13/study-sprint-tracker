@@ -18,3 +18,12 @@ this project help me to learn fundamentals of python, introduction cli and a sma
 
 this is a simple project where i got inspiration from chatgpt it told like it will be the best starting point.
 
+here is reference image.
+
+![alt text](image.png)
+
+and my response.
+
+![alt text](image-1.png)
+
+![alt text](image.png)
