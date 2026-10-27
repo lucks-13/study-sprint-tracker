@@ -3,8 +3,11 @@ import json
 try:
     with open("sessions.json","r") as file:
         sessions=json.load(file)
-except FileNotFoundError or :
+except FileNotFoundError:
     sessions = []
+except json.JSONDecodeError:
+    print("session.json contains invalid Json, Please check the file before continuing")
+    raise SystemExit(1)
 
 def save_sessions(sessions):
     with open("sessions.json","w") as file:
