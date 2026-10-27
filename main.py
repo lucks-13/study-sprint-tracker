@@ -1,3 +1,4 @@
+sessions = []
 while True:
     print("=======================")
     print("Study Sprint Tracker")
@@ -11,15 +12,15 @@ while True:
     print("\n")
 
     if x==1:
-        session = []
         study_topic = input("Enter Study topic (eg: Python, DSA, JavaScript) :")
-        duration = int(input("Enter duration in minutes (eg: 45)"))
-        dict = {
+        duration = int(input("Enter duration in minutes (eg: 45) :"))
+        new_session = {
             "topic":study_topic,
             "minutes":duration
         }
-        session.append(dict)
+        sessions.append(new_session)
         print("Adding a study session.\n")
+        print(sessions)
     elif x==2:
         print("Viewing study session.\n")
     elif x==3:
