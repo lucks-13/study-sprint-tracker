@@ -1,8 +1,17 @@
 import json
+import os
 
+def get_data_file():
+    app_data = os.environ.get("LOCALAPPDATA")
+    if not app_data:
+        raise RuntimeError("Windows application data directory not found.")
+    data_dir = os.path.join(app_data,"study-sprint-tracker")
+    os.makedirs(data_dir,exist_ok=True)
+    return os.path.join(data_dir,"sessions.json")
+    
 def load_sessions():
     try:
-        with open("%LOCALAPPDATA%\StudySprintTracker\sessions.json","r") as file:
+        with open("sessions.json","r") as file:
             sessions=json.load(file)
     except FileNotFoundError:
         sessions = []
