@@ -11,14 +11,16 @@ while True:
     print("\n")
 
     if x==1:
-        print("Adding a study session.")
+        session = []
+        study_topic = input("Study topic (eg: Python, DSA, JavaScript) :")
+        print("Adding a study session.\n")
     elif x==2:
-        print("Viewing study session.")
+        print("Viewing study session.\n")
     elif x==3:
-        print("Showing learning summary.")
+        print("Showing learning summary.\n")
     elif x==4:
-        print("Good Bye")
+        print("Good Bye\n")
         break
     else:
-        print("Invalid Choice, Try again.")
+        print("Invalid Choice, Try again.\n")
 
