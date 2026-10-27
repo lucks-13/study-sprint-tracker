@@ -20,10 +20,11 @@ this is a simple project where i got inspiration from chatgpt it told like it wi
 
 here is reference image.
 
-![alt text](image.png)
+![alt text](asset/image.png)
 
 and my response.
 
-![alt text](image-1.png)
+![alt text](asset/image-1.png)
 
-![alt text](image.png)
+![alt text](asset/image-2.png)
+
