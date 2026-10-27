@@ -1,8 +1,6 @@
 import json
 
 def load_sessions():
-    if not isinstance(sessions,list):
-        print("sessions.json must contain a json list.")
     try:
         with open("sessions.json","r") as file:
             sessions=json.load(file)
@@ -11,6 +9,8 @@ def load_sessions():
     except json.JSONDecodeError:
         print("session.json contains invalid Json, Please check the file before continuing")
         raise SystemExit(1)
+    if not isinstance(sessions,list):
+        print("sessions.json must contain a json list.")
     return sessions
 
 sessions = load_sessions()
@@ -35,13 +35,14 @@ def add_session(sessions):
         except ValueError:
             print("Invalid Duration, Try again.\n")
             continue
-        new_session = {
-                "topic":study_topic,
-                "minutes":duration
-            }
-            sessions.append(new_session)
-            save_sessions(sessions)
-            print("Adding a study session.\n")
+    new_session = {
+        "topic":study_topic,
+        "minutes":duration
+        }
+    sessions.append(new_session)
+    save_sessions(sessions)
+    print("Adding a study session.\n")
+    return sessions
 
 while True:
     print("=======================")
@@ -59,7 +60,7 @@ while True:
         print("Invalid Choice, Try again.\n")
         continue
     if x==1:
-        
+        sessions=add_session(sessions)
     elif x==2:
         print("====== Study Sessions ======")
         if not sessions:
