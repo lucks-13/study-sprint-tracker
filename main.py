@@ -23,6 +23,8 @@ while True:
         print(sessions)
     elif x==2:
         print("Viewing study session.\n")
+        print("====== Study Sessions ======")
+        for i in range()
     elif x==3:
         print("Showing learning summary.\n")
     elif x==4:
