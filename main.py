@@ -74,6 +74,32 @@ def show_summary(sessions):
 
 def main():
     sessions = load_sessions()
+    while True:
+        print("=======================")
+        print("Study Sprint Tracker")
+        print("=======================")
+        print("1. Add study session")
+        print("2. View study sessions")
+        print("3. Show learning summary")
+        print("4. Exit\n")
+
+        try:
+            x = int(input("Choose an option: "))
+            print("\n")
+        except ValueError:
+            print("Invalid Choice, Try again.\n")
+            continue
+        if x==1:
+            sessions=add_session(sessions)
+        elif x==2:
+            view_sessions(sessions)
+        elif x==3:
+            show_summary(sessions)
+        elif x==4:
+            print("Good Bye\n")
+            break
+        else:
+            print("Invalid Choice, Try again.\n")
 
 if __name__ == "__main__":
     main()
