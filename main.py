@@ -1,4 +1,6 @@
 sessions = []
+total_min=0
+
 while True:
     print("=======================")
     print("Study Sprint Tracker")
@@ -29,8 +31,11 @@ while True:
             print(f"{i+1}. Topic: {sessions[i]['topic']} | Duration: {sessions[i]['minutes']}")
     elif x==3:
         print("====== Learning Summary ======")
-        print(f"Total study time : {} minutes")
-        
+        print(f"Total study time : {sum(sessions[]['minutes'])} minutes")
+        for i in range(len(sessions)):
+            print(f"{sessions[i]['topic']} : {sessions[i]['minutes']} minutes")
+            total_min+=sessions[i]['minutes']
+        print(f"Total study time : {s)} minutes")
     elif x==4:
         print("Good Bye\n")
         break
