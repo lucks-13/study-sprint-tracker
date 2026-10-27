@@ -14,6 +14,12 @@ A command line application for recording study sessions, tracking time spent on 
 
 this project help me to learn fundamentals of python, introduction cli and a small refreshment to my python knowledge where i start to code from scratch.
 
+## How to Run this project.
+
+```
+git clone https://github.com/lucks-13/study-sprint-tracker.git
+```
+
 ## How i made this project.
 
 this is a simple starting project, i got inspiration from chatgpt it told like it will be the best starting point.
