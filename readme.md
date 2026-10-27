@@ -36,6 +36,10 @@ and my response.
 
 ![alt text](asset/image-2.png)
 
+# What i have learned.
+* Introduction to command line interface
+* Introduction to File I/O and persistent data
+
 # Ai Disclosure
 i used ai to guide me on building this project and explicitly told to help me only when i got stuck.
 95 to 99 % of the code is Human coding. the ai just gave me instruction when i got struck.
