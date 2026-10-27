@@ -20,6 +20,10 @@ this project help me to learn fundamentals of python, introduction cli and a sma
 git clone https://github.com/lucks-13/study-sprint-tracker.git
 ```
 ```
+.\dist\study-sprint-tracker.exe
+```
+or
+```
 python main.py
 ```
 ## How i made this project.
