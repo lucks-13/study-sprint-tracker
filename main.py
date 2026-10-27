@@ -2,7 +2,7 @@ import json
 
 def load_sessions():
     try:
-        with open("sessions.json","r") as file:
+        with open("%LOCALAPPDATA%\StudySprintTracker\sessions.json","r") as file:
             sessions=json.load(file)
     except FileNotFoundError:
         sessions = []
