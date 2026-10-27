@@ -24,7 +24,8 @@ while True:
     elif x==2:
         print("Viewing study session.\n")
         print("====== Study Sessions ======")
-        for i in range()
+        for i in range(0,len(sessions)-1):
+            print(f"{i}. Topic: {sessions[i][topic]} | Duration: {sessions[i][minutes]}")
     elif x==3:
         print("Showing learning summary.\n")
     elif x==4:
